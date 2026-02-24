@@ -10,6 +10,8 @@ import {
   ChevronLeft,
   ChevronRight,
   LogOut,
+  Info,
+  BookUser,
 } from "lucide-react";
 import logororaima from "../assets/Logo_Parque_Roraima.png";
 
@@ -21,7 +23,9 @@ type View =
   | "gastos"
   | "estadisticas"
   | "calendario"
-  | "reclamos";
+  | "reclamos"
+  | "editar residente"
+  | "sobre nosotros";
 
 interface SidebarProps {
   currentView: View;
@@ -47,7 +51,13 @@ export function Sidebar({
     { id: "estadisticas" as View, label: "Estadísticas", icon: BarChart3 },
     { id: "calendario" as View, label: "Calendario", icon: CalendarDays },
     { id: "reclamos" as View, label: "Reclamos", icon: MessageSquare },
-  ];
+    {
+      id: "editar residente" as View,
+      label: "Editar Residente",
+      icon: BookUser,
+    },
+    { id: "sobre nosotros" as View, label: "Sobre Nosotros", icon: Info },
+  ];  
 
   return (
     <>
