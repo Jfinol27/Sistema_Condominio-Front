@@ -4,6 +4,7 @@ import { Dashboard } from "./views/dashboard";
 import Login from "./views/login";
 import { Menu } from "lucide-react";
 import Residentes from "./views/residentes";
+import PagosAdmin from "./views/pagos";
 
 // 1. Definimos el tipo exacto que espera el Sidebar
 type MainView =
@@ -52,6 +53,7 @@ function App() {
         {/* Renderizado de vistas */}
         {currentView === "dashboard" && <Dashboard />}
         {currentView === "residentes" && <Residentes />}
+        {currentView === "pagos" && <PagosAdmin />}
       </main>
     </div>
   );
