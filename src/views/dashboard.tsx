@@ -8,6 +8,7 @@ const stats = [
     icon: DollarSign,
     bgColor: "bg-orange-500/10",
     iconColor: "text-red-500",
+    color: "text-red-500",
   },
   {
     title: "Propiedades",
@@ -65,7 +66,7 @@ const recentActivity = [
 
 export function Dashboard() {
   return (
-    <div className="min-h-screen bg-[#EDE8D0] p-4 md:p-8 font-sans">
+    <div className="flex-1 bg-[#EDE8D0] min-h-screen font-sans p-8">
       {/* Llamamos al Header reutilizable */}
       <Header title="Panel de Administración" />
 
@@ -74,13 +75,15 @@ export function Dashboard() {
         {stats.map((stat) => (
           <div
             key={stat.title}
-            className="bg-white rounded-2xl p-6 shadow-sm border border-black/5 flex items-center justify-between"
+            className="bg-white rounded-[1.8rem] p-6 shadow-sm border border-black/5 flex items-center justify-between"
           >
             <div>
-              <p className="text-sm font-medium text-gray-500 mb-1">
+              <p className="text-gray-400 text-[11px] font-bold uppercase tracking-wider mb-1">
                 {stat.title}
               </p>
-              <h3 className="text-4xl font-bold text-gray-800">{stat.value}</h3>
+              <h3 className="text-2xl font-black text-gray-800">
+                {stat.value}
+              </h3>
             </div>
             <div
               className={`w-14 h-14 rounded-2xl ${stat.bgColor} flex items-center justify-center`}
@@ -92,7 +95,7 @@ export function Dashboard() {
       </div>
 
       {/* Actividad Reciente */}
-      <div className="bg-white rounded-2xl shadow-sm border border-black/5 overflow-hidden">
+      <div className="bg-white rounded-[2rem] shadow-sm border border-black/5 overflow-hidden">
         <div className="px-8 py-6 border-b border-gray-50">
           <h3 className="text-xl font-bold text-gray-800">
             Actividad Reciente
@@ -117,9 +120,9 @@ export function Dashboard() {
                   </p>
                   <div className="w-28 text-right">
                     <span
-                      className={`inline-block px-4 py-1.5 rounded-full text-xs font-bold ${
+                      className={`inline-block px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider ${
                         activity.status === "Completado"
-                          ? "bg-[#8BAF3B]/10 text-[#6B9B2E]"
+                          ? "bg-[#f1f8e9] text-[#94b43b]"
                           : "bg-orange-100 text-orange-600"
                       }`}
                     >
