@@ -4,6 +4,8 @@ import { Dashboard } from "./views/dashboard";
 import Login from "./views/login";
 import { Menu } from "lucide-react";
 import Residentes from "./views/residentes";
+import GastosAdmin from "./views/gastos";
+import NominaAdmin from "./views/nomina";
 import PagosAdmin from "./views/pagos";
 
 // 1. Definimos el tipo exacto que espera el Sidebar
@@ -54,6 +56,8 @@ function App() {
         {currentView === "dashboard" && <Dashboard />}
         {currentView === "residentes" && <Residentes />}
         {currentView === "pagos" && <PagosAdmin />}
+        {currentView === "nomina" && <NominaAdmin />}
+        {currentView === "gastos" && <GastosAdmin />}
       </main>
     </div>
   );

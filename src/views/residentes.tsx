@@ -86,10 +86,10 @@ const Residentes = () => {
           {residentes.map((residente) => (
             <div
               key={residente.id}
-              className="bg-white p-6 rounded-[2rem] shadow-sm border border-gray-50 flex flex-col gap-4 relative overflow-hidden"
+              className="bg-white p-6 rounded-[1.8rem] shadow-sm border border-gray-50 flex flex-col gap-4 relative overflow-hidden"
             >
               {/* Badge de Estado */}
-              <span className="absolute top-6 right-6 bg-[#f1f8e9] text-[#94b43b] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              <span className="absolute top-6 right-6 bg-[#f1f8e9] text-[#94b43b] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                 {residente.estado}
               </span>
 
@@ -97,7 +97,7 @@ const Residentes = () => {
                 <h3 className="text-xl font-bold text-gray-800">
                   {residente.nombre}
                 </h3>
-                <p className="text-gray-500 font-medium">
+                <p className="text-gray-500 font-medium text-sm">
                   Unidad {residente.unidad}
                 </p>
               </div>

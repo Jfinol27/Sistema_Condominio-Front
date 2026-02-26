@@ -89,7 +89,7 @@ const PagosAdmin = () => {
         <div className="bg-white/50 p-2 rounded-[2rem] shadow-sm overflow-hidden border border-white/20">
           <table className="w-full text-left border-separate border-spacing-y-2">
             <thead>
-              <tr className="text-gray-500 text-sm uppercase tracking-wider">
+              <tr className="text-gray-500 text-[11px] uppercase tracking-widest">
                 <th className="px-8 py-4 font-bold">Unidad</th>
                 <th className="px-6 py-4 font-bold">Concepto</th>
                 <th className="px-6 py-4 font-bold">Monto</th>
@@ -103,16 +103,18 @@ const PagosAdmin = () => {
                   key={index}
                   className="bg-white hover:bg-gray-50 transition-colors group"
                 >
-                  <td className="px-8 py-5 rounded-l-2xl font-bold text-gray-800">
+                  <td className="px-8 py-5 rounded-l-2xl font-bold text-gray-800 text-sm">
                     {pago.id}
                   </td>
-                  <td className="px-6 py-5 text-gray-600 font-medium">
+                  <td className="px-6 py-5 text-gray-600 font-medium text-sm">
                     {pago.concepto}
                   </td>
-                  <td className="px-6 py-5 font-bold text-gray-800">
+                  <td className="px-6 py-5 font-bold text-gray-800 text-sm">
                     {pago.monto}
                   </td>
-                  <td className="px-6 py-5 text-gray-500">{pago.fecha}</td>
+                  <td className="px-6 py-5 text-gray-500 text-sm">
+                    {pago.fecha}
+                  </td>
                   <td className="px-6 py-5 rounded-r-2xl text-center">
                     <StatusBadge status={pago.estado} />
                   </td>
@@ -135,7 +137,7 @@ const StatusBadge = ({ status }: { status: string }) => {
 
   return (
     <span
-      className={`px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide ${styles[status]}`}
+      className={`px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider ${styles[status]}`}
     >
       {status}
     </span>
