@@ -24,7 +24,6 @@ type View =
   | "estadisticas"
   | "calendario"
   | "reclamos"
-  | "editar residente"
   | "sobre nosotros";
 
 interface SidebarProps {
@@ -51,13 +50,8 @@ export function Sidebar({
     { id: "estadisticas" as View, label: "Estadísticas", icon: BarChart3 },
     { id: "calendario" as View, label: "Calendario", icon: CalendarDays },
     { id: "reclamos" as View, label: "Reclamos", icon: MessageSquare },
-    {
-      id: "editar residente" as View,
-      label: "Editar Residente",
-      icon: BookUser,
-    },
     { id: "sobre nosotros" as View, label: "Sobre Nosotros", icon: Info },
-  ];  
+  ];
 
   return (
     <>

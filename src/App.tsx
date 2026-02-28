@@ -7,6 +7,10 @@ import Residentes from "./views/residentes";
 import GastosAdmin from "./views/gastos";
 import NominaAdmin from "./views/nomina";
 import PagosAdmin from "./views/pagos";
+import EstadisticasFinancieras from "./views/estadisticas";
+import Calendario from "./views/calendario";
+import SobreNosotros from "./views/nosotros";
+import Reclamos from "./views/reclamos";
 
 // 1. Definimos el tipo exacto que espera el Sidebar
 type MainView =
@@ -18,7 +22,6 @@ type MainView =
   | "estadisticas"
   | "calendario"
   | "reclamos"
-  | "editar residente"
   | "sobre nosotros";
 type View = MainView | "login";
 
@@ -34,7 +37,7 @@ function App() {
     // Cambiamos bg-beige-600 por el código hexadecimal exacto
     <div className="flex h-screen bg-[#EDE8D0] text-gray-900 overflow-hidden">
       <Sidebar
-        currentView={currentView as MainView}
+        currentView={currentView}
         onViewChange={(view) => setCurrentView(view)}
         isOpen={isSidebarOpen}
         onToggle={() => setIsSidebarOpen(!isSidebarOpen)}
@@ -58,6 +61,10 @@ function App() {
         {currentView === "pagos" && <PagosAdmin />}
         {currentView === "nomina" && <NominaAdmin />}
         {currentView === "gastos" && <GastosAdmin />}
+        {currentView === "estadisticas" && <EstadisticasFinancieras />}
+        {currentView === "calendario" && <Calendario />}
+        {currentView === "reclamos" && <Reclamos />}
+        {currentView === "sobre nosotros" && <SobreNosotros />}
       </main>
     </div>
   );
